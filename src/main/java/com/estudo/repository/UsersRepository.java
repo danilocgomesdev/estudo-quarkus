@@ -1,4 +1,4 @@
-package com.estudo.services;
+package com.estudo.repository;
 
 import com.estudo.model.Users;
 import io.quarkus.hibernate.orm.panache.PanacheRepository;

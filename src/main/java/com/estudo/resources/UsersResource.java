@@ -1,25 +1,31 @@
 package com.estudo.resources;
 
 import com.estudo.model.Users;
-import com.estudo.services.UsersRepository;
+import com.estudo.repository.UsersRepository;
 
 import javax.inject.Inject;
 import javax.transaction.Transactional;
-import javax.validation.constraints.NotNull;
 import javax.ws.rs.*;
 import javax.ws.rs.core.MediaType;
 import java.util.List;
 
 @Path("/users")
+@Produces(MediaType.APPLICATION_JSON)
+@Consumes(MediaType.APPLICATION_JSON)
 public class UsersResource {
 
     @Inject
     UsersRepository usersRepository;
 
     @GET
-    @Produces(MediaType.APPLICATION_JSON)
     public List<Users> listar(){
         return usersRepository.listAll();
+    }
+
+    @GET
+    @Path("/{id}")
+    public Users buscar(@PathParam("id") Long id){
+        return usersRepository.findById(id);
     }
 
     @POST

@@ -61,11 +61,11 @@ public class Users implements Serializable {
         this.email = email;
     }
 
-    public String getFone() {
+    public String getPhone() {
         return phone;
     }
 
-    public void setFone(String phone) {
+    public void setPhone(String phone) {
         this.phone = phone;
     }
 

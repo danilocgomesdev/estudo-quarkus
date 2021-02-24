@@ -35,8 +35,7 @@ public class PedidosResource {
 
     @POST
     @Transactional
-    public Pedido salvar(Pedido pedido, Users users){
-        pedido.setCliente(users);
+    public Pedido salvar(Pedido pedido){
         pedidosRepository.persist(pedido);
         return pedido;
     }

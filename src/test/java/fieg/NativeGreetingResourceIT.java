@@ -1,4 +1,4 @@
-package com.estudo;
+package fieg;
 
 import io.quarkus.test.junit.NativeImageTest;
 

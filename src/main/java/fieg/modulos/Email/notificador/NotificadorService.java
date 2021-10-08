@@ -1,6 +1,6 @@
-package fieg.modulos.email.notificador;
+package fieg.modulos.Email.notificador;
 
-import fieg.modulos.email.notificador.command.NotificadorEmailCommand;
+import fieg.modulos.Email.notificador.command.NotificadorEmailCommand;
 
 public interface NotificadorService {
 

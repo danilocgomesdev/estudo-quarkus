@@ -1,4 +1,4 @@
-package com.estudo.model;
+package fieg.modulos.model;
 
 import io.quarkus.hibernate.orm.panache.PanacheEntity;
 

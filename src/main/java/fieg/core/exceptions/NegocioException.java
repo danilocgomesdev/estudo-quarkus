@@ -1,4 +1,4 @@
-package com.estudo.core.exceptions;
+package fieg.core.exceptions;
 
 public class NegocioException extends Exception {
 	public NegocioException(String message) {

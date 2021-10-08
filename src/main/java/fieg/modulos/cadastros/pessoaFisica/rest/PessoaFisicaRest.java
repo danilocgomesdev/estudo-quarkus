@@ -1,7 +1,7 @@
-package com.estudo.cadastros.pessoaFisica.rest;
+package fieg.modulos.cadastros.pessoaFisica.rest;
 
-import com.estudo.cadastros.pessoaFisica.model.PessoaFisica;
-import com.estudo.cadastros.pessoaFisica.repository.PessoaFisicaRepository;
+import fieg.modulos.cadastros.pessoaFisica.model.PessoaFisica;
+import fieg.modulos.cadastros.pessoaFisica.repository.PessoaFisicaRepository;
 
 import javax.inject.Inject;
 import javax.transaction.Transactional;

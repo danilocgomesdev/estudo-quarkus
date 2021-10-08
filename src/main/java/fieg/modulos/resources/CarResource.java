@@ -1,6 +1,6 @@
-package com.estudo.resources;
+package fieg.modulos.resources;
 
-import com.estudo.model.Car;
+import fieg.modulos.model.Car;
 
 import javax.transaction.Transactional;
 import javax.ws.rs.*;

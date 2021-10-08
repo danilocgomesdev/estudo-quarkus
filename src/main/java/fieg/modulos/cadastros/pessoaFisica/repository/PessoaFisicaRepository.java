@@ -1,6 +1,6 @@
-package com.estudo.cadastros.pessoaFisica.repository;
+package fieg.modulos.cadastros.pessoaFisica.repository;
 
-import com.estudo.cadastros.pessoaFisica.model.PessoaFisica;
+import fieg.modulos.cadastros.pessoaFisica.model.PessoaFisica;
 import io.quarkus.hibernate.orm.panache.PanacheRepository;
 
 import javax.enterprise.context.ApplicationScoped;

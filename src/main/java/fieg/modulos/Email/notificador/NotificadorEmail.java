@@ -1,4 +1,4 @@
-package fieg.modulos.email.notificador;
+package fieg.modulos.Email.notificador;
 
 import fieg.core.tool.email.Email;
 import fieg.core.tool.email.EmailManagerService;
@@ -6,7 +6,7 @@ import fieg.core.tool.email.ResultadoEmail;
 import fieg.core.tool.email.exception.TemplateNaoEncontradoException;
 import fieg.core.tool.email.template.DadosTemplateCriacaoUsuarioResultado;
 import fieg.core.tool.email.template.TemplateEmailType;
-import fieg.modulos.email.notificador.command.NotificadorEmailCommand;
+import fieg.modulos.Email.notificador.command.NotificadorEmailCommand;
 import org.eclipse.microprofile.config.inject.ConfigProperty;
 import org.jboss.logging.Logger;
 

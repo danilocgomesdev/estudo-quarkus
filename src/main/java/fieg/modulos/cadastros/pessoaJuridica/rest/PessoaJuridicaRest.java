@@ -1,4 +1,4 @@
-package com.estudo.cadastros.pessoaJuridica.rest;
+package fieg.modulos.cadastros.pessoaJuridica.rest;
 
 public class PessoaJuridicaRest {
 }

@@ -1,7 +1,7 @@
-package com.estudo.core.mapper;
+package fieg.core.mapper;
 
-import com.estudo.core.exceptions.SttnetExceptionBase;
-import com.estudo.core.util.RestUtils;
+import fieg.core.exceptions.SttnetExceptionBase;
+import fieg.core.util.RestUtils;
 import org.slf4j.Logger;
 
 import javax.inject.Inject;

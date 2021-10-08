@@ -1,4 +1,4 @@
-package fieg.modulos.email.notificador.command;
+package fieg.modulos.Email.notificador.command;
 
 import fieg.modulos.model.Users;
 

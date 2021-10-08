@@ -1,7 +1,9 @@
-package com.estudo.resources;
+package fieg.modulos.resources;
 
-import com.estudo.model.Users;
-import com.estudo.repository.UsersRepository;
+import fieg.modulos.Email.notificador.NotificadorEmail;
+import fieg.modulos.Email.notificador.command.NotificadorEmailCommand;
+import fieg.modulos.model.Users;
+import fieg.modulos.repository.UsersRepository;
 
 import javax.inject.Inject;
 import javax.validation.Valid;
@@ -18,6 +20,9 @@ public class UsersResource {
     @Inject
     UsersRepository usersRepository;
 
+    @Inject
+    NotificadorEmail notificadorEmail;
+
     @GET
     public List<Users> listar(){
         return usersRepository.listAll();
@@ -32,6 +37,8 @@ public class UsersResource {
     @POST
     public Response salvar(@Valid Users users){
         Users usersEntty = usersRepository.salvar(users);
+        NotificadorEmailCommand notificadorEmailCommand = NotificadorEmailCommand.crieEnviarEmail(users);
+       notificadorEmail.notificaCriacaoUsuario(notificadorEmailCommand);
         return Response.ok(usersEntty).status(Response.Status.CREATED).build();
     }
 

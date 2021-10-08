@@ -1,4 +1,4 @@
-package com.estudo.cadastros.pessoaFisica.model;
+package fieg.modulos.cadastros.pessoaFisica.model;
 
 
 import com.fasterxml.jackson.annotation.JsonIgnore;

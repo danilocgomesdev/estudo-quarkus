@@ -1,4 +1,4 @@
-package com.estudo.core.util;
+package fieg.core.util;
 
 import com.fasterxml.jackson.databind.node.ArrayNode;
 import com.fasterxml.jackson.databind.node.ObjectNode;

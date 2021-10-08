@@ -1,4 +1,4 @@
-package com.estudo.core.exceptions;
+package fieg.core.exceptions;
 
 public class FiltroException extends SttnetExceptionBase {
 	public FiltroException(String filtro, Throwable throwable) {

@@ -1,9 +1,8 @@
-package com.estudo.resources;
+package fieg.modulos.resources;
 
-import com.estudo.model.Pedido;
-import com.estudo.model.Users;
-import com.estudo.repository.PedidosRepository;
-import com.estudo.repository.UsersRepository;
+import fieg.modulos.model.Pedido;
+import fieg.modulos.repository.PedidosRepository;
+import fieg.modulos.repository.UsersRepository;
 
 import javax.inject.Inject;
 import javax.transaction.Transactional;

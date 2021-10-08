@@ -5,18 +5,18 @@ import fieg.core.tool.email.template.TemplateEmailType;
 import io.quarkus.mailer.Mailer;
 import io.quarkus.qute.Template;
 import io.quarkus.qute.api.ResourcePath;
-import org.slf4j.Logger;
+import org.jboss.logging.Logger;
 
 import javax.enterprise.context.ApplicationScoped;
 import javax.inject.Inject;
 
 @ApplicationScoped
-public class EmailManagerQuarkusService implements EmailManagerService {
+public class EmailManagerServiceIpml implements EmailManagerService {
 
 	@Inject
 	Mailer mailer;
 
-	@ResourcePath("criacaoUsuario")
+	@ResourcePath("templateEmail")
 	@Inject
 	Template criacaoUsuario;
 
@@ -33,7 +33,7 @@ public class EmailManagerQuarkusService implements EmailManagerService {
 			return new ResultadoEmail(e, msgErro);
 		}
 
-		return new ResultadoEmail("Email enviado");
+		return new ResultadoEmail("Email enviado!");
 	}
 
 	@SuppressWarnings("SwitchStatementWithTooFewBranches")

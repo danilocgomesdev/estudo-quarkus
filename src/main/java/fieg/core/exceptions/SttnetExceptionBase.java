@@ -1,4 +1,4 @@
-package com.estudo.core.exceptions;
+package fieg.core.exceptions;
 
 /**
  * Todas exceptions que irão ser externilizadas para consumidor da API

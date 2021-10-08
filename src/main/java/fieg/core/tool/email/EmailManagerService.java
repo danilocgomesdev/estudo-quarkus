@@ -6,5 +6,5 @@ import fieg.core.tool.email.template.TemplateEmailType;
 public interface EmailManagerService {
 	ResultadoEmail sendEmail(Email email);
 
-	Email createEmailByTemplate(String to, String subject, TemplateEmailType templateEmailType, Object dadosTemplate) throws TemplateNaoEncontradoException;
+	Email createEmailByTemplate(String to, String subject, TemplateEmailType templateEmailType, Object dadosTemplate);
 }

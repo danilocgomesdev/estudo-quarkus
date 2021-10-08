@@ -1,4 +1,4 @@
-package com.estudo.core.util;
+package fieg.core.util;
 
 import org.jboss.resteasy.util.DateUtil;
 

@@ -1,4 +1,4 @@
-package com.estudo.model;
+package fieg.modulos.model;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
 

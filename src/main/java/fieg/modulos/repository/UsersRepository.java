@@ -1,6 +1,6 @@
-package com.estudo.repository;
+package fieg.modulos.repository;
 
-import com.estudo.model.Users;
+import fieg.modulos.model.Users;
 import io.quarkus.hibernate.orm.panache.PanacheRepository;
 
 import javax.enterprise.context.ApplicationScoped;

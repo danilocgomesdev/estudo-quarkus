@@ -1,6 +1,4 @@
-package com.estudo.model;
-
-import org.hibernate.annotations.Cascade;
+package fieg.modulos.model;
 
 import javax.persistence.*;
 import java.io.Serializable;

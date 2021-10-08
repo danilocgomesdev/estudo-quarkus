@@ -1,4 +1,4 @@
-package com.estudo.core.health;
+package fieg.core.health;
 
 import org.eclipse.microprofile.health.HealthCheck;
 import org.eclipse.microprofile.health.HealthCheckResponse;

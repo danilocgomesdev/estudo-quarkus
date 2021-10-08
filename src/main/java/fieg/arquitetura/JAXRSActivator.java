@@ -1,4 +1,4 @@
-package com.estudo.arquitetura;
+package fieg.arquitetura;
 
 
 import javax.ws.rs.ApplicationPath;

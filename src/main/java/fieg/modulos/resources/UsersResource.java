@@ -4,9 +4,10 @@ import com.estudo.model.Users;
 import com.estudo.repository.UsersRepository;
 
 import javax.inject.Inject;
-import javax.transaction.Transactional;
+import javax.validation.Valid;
 import javax.ws.rs.*;
 import javax.ws.rs.core.MediaType;
+import javax.ws.rs.core.Response;
 import java.util.List;
 
 @Path("/users")
@@ -29,26 +30,23 @@ public class UsersResource {
     }
 
     @POST
-    @Transactional
-    public Users salvar(Users users){
-        usersRepository.persist(users);
-        return users;
+    public Response salvar(@Valid Users users){
+        Users usersEntty = usersRepository.salvar(users);
+        return Response.ok(usersEntty).status(Response.Status.CREATED).build();
     }
 
     @PUT
     @Path("/{id}")
-    @Transactional
-    public Users atualizar(@PathParam("id") Long id, Users users){
-        Users usersDB =  usersRepository.findById(id);
-        usersDB.setName(users.getName());
-        return usersDB;
+    public Response update(@PathParam("id") Long id, Users users) {
+       Users usersUpdated = usersRepository.update(id, users);
+        return Response.ok(usersUpdated).build();
     }
 
     @DELETE
     @Path("/{id}")
-    @Transactional
-    public void remover( @PathParam("id") Long id) {
-        usersRepository.deleteById(id);
+    public Response remover( @PathParam("id") Long id) {
+        usersRepository.remover(id);
+        return Response.status(Response.Status.NO_CONTENT).build();
     }
 
 

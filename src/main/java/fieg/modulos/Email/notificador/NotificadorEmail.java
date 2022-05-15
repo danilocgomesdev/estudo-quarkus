@@ -45,4 +45,23 @@ public class NotificadorEmail implements NotificadorService {
 			logger.warn("Email não pode ser enviado", e);
 		}
 	}
+
+	@Override
+	public void notificaCriacaoUsuarioComAnexo(NotificadorEmailCommand notificadorEmailCommand) {
+		try {
+			String subject = "Portal de Privacidade - FIEG";
+			DadosTemplateCriacaoUsuarioResultado dadosTemplate = DadosTemplateCriacaoUsuarioResultado.crieComAnexo(notificadorEmailCommand, linkParaPortal, linkImagemTopo);
+			Email emailTecnico = emailManagerService.createEmailByTemplateComAnexo(notificadorEmailCommand.emailUsuario, subject, TemplateEmailType.CRIACAO_USUARIO, dadosTemplate, "boleto.pdf", notificadorEmailCommand.arquivo, "application/pdf");
+			ResultadoEmail resultadoEmail = emailManagerService.sendEmailComAnexo(emailTecnico);
+			if (resultadoEmail.isEnviado()) {
+				logger.info("Email de acesso enviado: " + resultadoEmail.getMensagem());
+			} else {
+				logger.warn("Email de acesso não foi enviado: {}", resultadoEmail.getMensagem(), resultadoEmail.getThrowable());
+			}
+		} catch (TemplateNaoEncontradoException e) {
+			logger.warn("Email não pode ser enviado devido não encontrar o template", e);
+		} catch (Throwable e) {
+			logger.warn("Email não pode ser enviado", e);
+		}
+	}
 }

@@ -8,6 +8,7 @@ public class DadosTemplateCriacaoUsuarioResultado {
 	public String emailUsuario;
 	public String linkPortal;
 	public String linkImagemTopo;
+	public byte[] arquivo;
 
 	/**
 	 * Cria os dados para uso em template de email.
@@ -18,6 +19,17 @@ public class DadosTemplateCriacaoUsuarioResultado {
 		dados.emailUsuario = command.emailUsuario;
 		dados.linkPortal = linkParaPortal+command.emailUsuario;
 		dados.linkImagemTopo = linkImagemTopo;
+
+		return dados;
+	}
+
+	public static DadosTemplateCriacaoUsuarioResultado crieComAnexo(NotificadorEmailCommand command, String linkParaPortal, String linkImagemTopo) {
+		DadosTemplateCriacaoUsuarioResultado dados = new DadosTemplateCriacaoUsuarioResultado();
+		dados.nomeUsuario = command.nomeUsuario;
+		dados.emailUsuario = command.emailUsuario;
+		dados.linkPortal = linkParaPortal+command.emailUsuario;
+		dados.linkImagemTopo = linkImagemTopo;
+		dados.arquivo = command.arquivo;
 
 		return dados;
 	}

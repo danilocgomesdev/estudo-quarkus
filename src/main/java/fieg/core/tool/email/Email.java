@@ -26,6 +26,13 @@ public class Email {
 		return email;
 	}
 
+	public static Email crieEmailHTMLComAnexo(String to, String subject, String html,
+											  String nomeArquivo, byte[] arquivo, String tipoArquivo) {
+		Email email = new Email();
+		email.setDadosEmail(Mail.withHtml(to, subject, html).addAttachment(nomeArquivo,arquivo,tipoArquivo));
+		return email;
+	}
+
 	public Mail getDadosEmail() {
 		return dadosEmail;
 	}
